@@ -1,6 +1,6 @@
 <template>
     <div>
-        <SearchBar></SearchBar>
+        <SearchBar @termChange="onTermChange"></SearchBar>
     </div>
 </template>
 
@@ -12,6 +12,12 @@ export default {
     name: 'App',
     components: {
         SearchBar    //CUIDADO: Muitas vezes isso é esquecido.
+    },
+    methods: {
+        onTermChange(searchTerm) {
+            //searchTermo poderia ser qq nome e se refere ao event.target.value
+            console.log(searchTerm);
+        }
     }
 }
 </script>
