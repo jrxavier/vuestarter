@@ -7,6 +7,9 @@
 
 <script>
 import SearchBar from './components/SearchBar';
+import axios from 'axios';
+
+const KEY_API = ''
 
 export default {
     name: 'App',
@@ -17,6 +20,15 @@ export default {
         onTermChange(searchTerm) {
             //searchTermo poderia ser qq nome e se refere ao event.target.value
             console.log(searchTerm);
+            
+            axios.get('https://googleapis.com/youtube/v3/search', {
+                params: {
+                    key: KEY_API,
+                    type: 'video',
+                    part: 'snippet',
+                    q: searchTerm
+                }
+            }).then(response => console.log(response))
         }
     }
 }
