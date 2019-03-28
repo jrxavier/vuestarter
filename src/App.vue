@@ -1,8 +1,11 @@
 <template>
     <div>
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoList></VideoList>
-        {{ videos.length }}
+        <!-- 
+        v-bind pode ser substituido por :
+        Primeiro videos é a referência para a propriedade que será usada no componente VideoList
+        Segundo video é o dado que é passado para o componente  -->
+        <VideoList :videos="videos"></VideoList>
     </div>
 </template>
 
