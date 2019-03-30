@@ -2,10 +2,12 @@
     <ul>
         <VideoListItem 
             v-for="videoItem in videos"
-            v-bind:video="videoItem"
+            :video="videoItem"
+            :key="videoItem.etag"   
             >
         </VideoListItem>    
     </ul>
+    <!-- Key - identificador unico do item que esta sendo trabalhado no v-on -->
 </template>
 
 <script>
