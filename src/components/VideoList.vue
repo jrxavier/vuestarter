@@ -1,7 +1,7 @@
 <template>
     <ul>
-        Video List
-        {{videos.length}}
+        <VideoListItem v-for="video in videos">
+        </VideoListItem>    
     </ul>
 </template>
 
