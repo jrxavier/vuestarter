@@ -9,11 +9,9 @@
     </div>
 </template>
 
-
 <script>
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
-
 
 import axios from 'axios';
 
@@ -32,8 +30,9 @@ export default {
         }
     },
     methods: {
+        //Bind do método ao evento é feito lá no template
         onTermChange(searchTerm) {
-            //searchTermo poderia ser qq nome e se refere ao event.target.value
+            //searchTerm poderia ser qq nome e se refere ao event.target.value
             console.log(searchTerm);
             
             axios.get('https://www.googleapis.com/youtube/v3/search', {
