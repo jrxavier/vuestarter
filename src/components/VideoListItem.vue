@@ -20,7 +20,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<!-- Scoped : só se aplica ao componente
+css: trabalha a imagem e o texto na mesma linha. com cursos na forma de ponteiro e cor cinza na hora que
+passa o mouse por cima da área da imagem -->
+<style scoped> 
     li {
         display: flex;
         cursor: pointer;
