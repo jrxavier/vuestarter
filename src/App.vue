@@ -15,7 +15,7 @@ import VideoList from './components/VideoList';
 
 import axios from 'axios';
 
-const KEY_API = 'AIzaSyAAtd3ZkmShI1-GE4ud-JxznFWqSO0LznA'
+const KEY_API = ''
 
 export default {
     name: 'App',
