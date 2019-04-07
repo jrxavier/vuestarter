@@ -1,12 +1,15 @@
 <template>
     <div class="container">
-        <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoDetail :video="selectVideo"></VideoDetail>
-        <!-- 
-        v-bind pode ser substituido por :
-        Primeiro videos é a referência para a propriedade que será usada no componente VideoList
-        Segundo video é o dado que é passado para o componente  -->
-        <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
+        <SearchBar @termChange="onTermChange"></SearchBar>        
+        <div class="row">
+            <VideoDetail :video="selectVideo"></VideoDetail>
+            <!-- 
+            v-bind pode ser substituido por :
+            Primeiro videos é a referência para a propriedade que será usada no componente VideoList
+            Segundo video é o dado que é passado para o componente  -->
+            <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
+        </div>
+
     </div>
 </template>
 
