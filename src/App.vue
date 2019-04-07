@@ -1,6 +1,7 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
+        <VideoDetail :video="video"></VideoDetail>
         <!-- 
         v-bind pode ser substituido por :
         Primeiro videos é a referência para a propriedade que será usada no componente VideoList
@@ -12,6 +13,7 @@
 <script>
 import SearchBar from './components/SearchBar';
 import VideoList from './components/VideoList';
+import VideoDetail from './components/VideoDetail';
 
 import axios from 'axios';
 
@@ -22,7 +24,8 @@ export default {
     components: {
            //CUIDADO: Muitas vezes isso é esquecido.
         SearchBar ,
-        VideoList
+        VideoList,
+        VideoDetail
     },
     data() {
         return {
