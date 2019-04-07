@@ -5,7 +5,7 @@
         v-bind pode ser substituido por :
         Primeiro videos é a referência para a propriedade que será usada no componente VideoList
         Segundo video é o dado que é passado para o componente  -->
-        <VideoList :videos="videos"></VideoList>
+        <VideoList @videoSelect="onVideoSelect" :videos="videos"></VideoList>
     </div>
 </template>
 
@@ -45,6 +45,9 @@ export default {
             }).then(response => {
                 this.videos = response.data.items
             })
+        },
+        onVideoSelect(video) {
+            console.log(video);
         }
     }
 }
