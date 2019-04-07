@@ -4,8 +4,9 @@
             v-for="videoItem in videos"
             :video="videoItem"
             :key="videoItem.etag"   
+            @videoSelect="onVideoSelect" 
             >
-        </VideoListItem>    
+        </VideoListItem>    <!-- o evento videoSelect é captudado do componenet filho e repassado para cima-->
     </ul>
     <!-- Key - identificador unico do item que esta sendo trabalhado no v-on -->
 </template>
@@ -20,6 +21,11 @@ export default {
     },
     props: {
         videos: Array   //Type check da propriedade
+    },
+    methods: {
+        onVideoSelect(video) {
+            this.$emit('videoSelect', video);
+        }
     }
 }
 </script>
