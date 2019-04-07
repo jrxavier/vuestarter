@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <SearchBar @termChange="onTermChange"></SearchBar>
-        <VideoDetail :video="video"></VideoDetail>
+        <VideoDetail :video="selectVideo"></VideoDetail>
         <!-- 
         v-bind pode ser substituido por :
         Primeiro videos é a referência para a propriedade que será usada no componente VideoList
@@ -29,7 +29,8 @@ export default {
     },
     data() {
         return {
-            videos: []
+            videos: [],
+            selectVideo: null
         }
     },
     methods: {
@@ -50,7 +51,7 @@ export default {
             })
         },
         onVideoSelect(video) {
-            console.log(video);
+            this.selectVideo = video;
         }
     }
 }
