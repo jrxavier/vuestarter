@@ -24,6 +24,7 @@ export default {
     },
     methods: {
         onVideoSelect(video) {
+            // o parametro video vem do evento gerado pelo filho
             this.$emit('videoSelect', video);
         }
     }
